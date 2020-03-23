@@ -27,7 +27,7 @@ public class VersionCommand extends SimpleCommand {
 		NorseMain.getVersion();
 		tell((ChatColor.GREEN + "-----------------------------------" +
 				" " +
-				ChatColor.GREEN + "Norse GameMode Changer " + NorseMain.getVersion() + " is now enabled." +
+				ChatColor.GREEN + "Norse Essentials " + NorseMain.getVersion() + " is now enabled." +
 				" " +
 				ChatColor.GREEN + "-----------------------------------"));
 
