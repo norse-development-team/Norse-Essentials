@@ -1,0 +1,11 @@
+me\TheFallen\norseessentials\commands\DeleteCommand.class
+me\TheFallen\norseessentials\commands\Spectator.class
+me\TheFallen\norseessentials\commands\Adventure.class
+me\TheFallen\norseessentials\commands\DeathBackCommand.class
+me\TheFallen\norseessentials\commands\HomeCommand.class
+me\TheFallen\norseessentials\ne.class
+me\TheFallen\norseessentials\PlayerCache.class
+me\TheFallen\norseessentials\commands\Creative.class
+me\TheFallen\norseessentials\commands\SetHomeCommand.class
+me\TheFallen\norseessentials\commands\Survival.class
+me\TheFallen\norseessentials\events\PlayerListener.class
