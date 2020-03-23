@@ -5,7 +5,7 @@ import me.TheFallen.norseessentials.events.PlayerListener;
 import org.mineacademy.fo.Common;
 import org.mineacademy.fo.plugin.SimplePlugin;
 
-public class ne extends SimplePlugin {
+public class NorseMain extends SimplePlugin {
 
 
 	@Override
