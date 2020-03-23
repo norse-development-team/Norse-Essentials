@@ -25,6 +25,7 @@
 
     <!-- Ninja: Read your pom.xml file to find the Foundation version we will be using -->
     <xmlproperty file="pom.xml" prefix="pom" keeproot="false" />
+    <property name="pom.properties.foundation.version" value=""/>
     <property name="foundation.version" value="${pom.properties.foundation.version}"/>
 
     <!-- Finally, compile the plugin -->
