@@ -23,6 +23,10 @@ public class NorseMain extends SimplePlugin {
 		//Load Resources
 		resources.load();
 
+
+
+
+
 		//Registering Commands
 		//----------Homes---------//
 		registerCommand(new home(resources));
@@ -35,9 +39,15 @@ public class NorseMain extends SimplePlugin {
 		registerCommand(new Survival());
 		registerCommand(new Adventure());
 		registerCommand(new Spectator());
+		registerCommand(new Fly());
+		registerCommand(new God());
 
-		//----------dback---------//
+		//----------Essentials---------//
 		registerCommand(new DeathBackCommand());
+		registerCommand(new VersionCommand());
+
+
+
 
 		//Registering Events
 		//----------Homes---------//

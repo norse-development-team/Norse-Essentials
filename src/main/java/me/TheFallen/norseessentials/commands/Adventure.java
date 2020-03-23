@@ -7,8 +7,9 @@ import org.bukkit.GameMode;
 public class Adventure extends SimpleCommand {
 
 	public Adventure() {
-		super("adventure|a|gm3");
+		super("adventure|a|gm2");
 		setPermission("ne.gamemode.adventure");
+		setUsage("<Target Player>");
 	}
 
 	@Override
@@ -18,7 +19,7 @@ public class Adventure extends SimpleCommand {
 		Player player = getPlayer();
 
 		hasPerm("ne.gamemode.adventure");
-		hasPerm("ne.gamemode.*");
+		hasPerm("ngmc.gamemode.all");
 		player.setGameMode(GameMode.ADVENTURE);
 		tell("&eYou are now in Adventure Mode!");
 

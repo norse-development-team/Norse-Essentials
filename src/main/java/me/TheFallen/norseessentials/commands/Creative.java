@@ -9,6 +9,7 @@ public class Creative extends SimpleCommand {
 	public Creative() {
 		super("creative|c|gm1");
 		setPermission("ne.gamemode.creative");
+		setUsage("<Target Player>");
 	}
 
 	@Override
@@ -18,7 +19,7 @@ public class Creative extends SimpleCommand {
 		Player player = getPlayer();
 
 		hasPerm("ne.gamemode.creative");
-		hasPerm("ne.gamemode.*");
+		hasPerm("ngmc.gamemode.all");
 		player.setGameMode(GameMode.CREATIVE);
 		tell("&eYou are now in Creative Mode!");
 

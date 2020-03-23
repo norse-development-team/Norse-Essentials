@@ -7,8 +7,9 @@ import org.mineacademy.fo.command.SimpleCommand;
 public class Spectator extends SimpleCommand {
 
 	public Spectator() {
-		super("spectator|sp|gm2");
+		super("spectator|sp|gm3");
 		setPermission("ne.gamemode.spectator");
+		setUsage("<Target Player>");
 
 	}
 
@@ -19,7 +20,7 @@ public class Spectator extends SimpleCommand {
 		Player player = getPlayer();
 
 		hasPerm("ne.gamemode.spectator");
-		hasPerm("ne.gamemode.*");
+		hasPerm("ngmc.gamemode.all");
 		player.setGameMode(GameMode.SPECTATOR);
 		tell("&eYou are now in Spectator Mode!");
 
