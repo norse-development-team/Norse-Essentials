@@ -9,6 +9,7 @@ public class Survival extends SimpleCommand {
 	public Survival() {
 		super("survival|s|gm0");
 		setPermission("ne.gamemode.survival");
+		setUsage("<Target Player>");
 	}
 
 	@Override
@@ -18,7 +19,7 @@ public class Survival extends SimpleCommand {
 		Player player = getPlayer();
 
 		hasPerm("ne.gamemode.survival");
-		hasPerm("ne.gamemode.*");
+		hasPerm("ngmc.gamemode.all");
 		player.setGameMode(GameMode.SURVIVAL);
 		tell("&eYou are now in Survival Mode!");
 	}

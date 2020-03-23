@@ -5,11 +5,15 @@ import me.TheFallen.norseessentials.events.PlayerListener;
 import org.mineacademy.fo.Common;
 import org.mineacademy.fo.plugin.SimplePlugin;
 
-public class ne extends SimplePlugin {
+public class NorseMain extends SimplePlugin {
 
 
 	@Override
 	protected void onPluginStart() {
+
+
+
+
 
 
 		//Registering Commands
@@ -23,9 +27,15 @@ public class ne extends SimplePlugin {
 		registerCommand(new Survival());
 		registerCommand(new Adventure());
 		registerCommand(new Spectator());
+		registerCommand(new Fly());
+		registerCommand(new God());
 
-		//----------dback---------//
+		//----------Essentials---------//
 		registerCommand(new DeathBackCommand());
+		registerCommand(new VersionCommand());
+
+
+
 
 		//Registering Events
 		//----------Homes---------//

@@ -50,7 +50,7 @@
     <properties>
 
         <!-- The full path to your plugin's main class, so that Spigot can find and load it -->
-        <main.class>me.TheFallen.norseessentials.ne</main.class>
+        <main.class>me.TheFallen.norseessentials.NorseMain</main.class>
 
         <!-- The Foundation version - change to latest version from https://github.com/kangarko/Foundation/releases -->
         <foundation.version>5.2.0</foundation.version>
