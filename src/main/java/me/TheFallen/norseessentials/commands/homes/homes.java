@@ -12,7 +12,7 @@ public class homes extends SimpleCommand {
     private final Resources r;
     private final WarpsHomesUtil util;
 
-    public homes(final Resources r) {
+    public homes(Resources r) {
         super("homes");
         this.r = r;
         util = new WarpsHomesUtil(r);
@@ -25,13 +25,15 @@ public class homes extends SimpleCommand {
     @Override
     public void onCommand() {
         checkConsole();
-        final FileConfiguration config = this.r.getWarps();
+        FileConfiguration config = r.getWarps();
         if (config.get("homes." + getPlayer().getUniqueId()) != null) {
-            final List<String> homes = util.returnArray("homes." + getPlayer().getUniqueId());
-            final String homeslist = String.join("&7,&a ", homes);
-            Common.tell(getPlayer(), "&7Currently showing a list of &a" + homes.size() + "&7 home(s): &a" + homeslist + "&7.");
-        } else {
-            Common.tell(getPlayer(),"&cYou do not have any homes available.");
+            List<String> homes = util.returnArray("homes." + getPlayer().getUniqueId());
+            if (homes.size() != 0) {
+                String homeslist = String.join("&7,&a ", homes);
+                Common.tell(getPlayer(), "&7Currently showing a list of &a" + homes.size() + "&7 home(s): &a" + homeslist + "&7.");
+            } else {
+                Common.tell(getPlayer(), "&cYou do not have any homes available.");
+            }
         }
     }
 }
