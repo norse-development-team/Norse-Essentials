@@ -25,8 +25,8 @@ public class PlayerCache extends YamlSectionConfig {
 
 	@Override
 	protected void onLoadFinish() {
-		if (isSet("DBackLocation"))
-			deathlocation = getLocation("DBackLocation");
+		if (isSet("DBLoc"))
+			deathlocation = getLocation("DBLoc");
 		//work with this
 	}
 
@@ -47,9 +47,15 @@ public class PlayerCache extends YamlSectionConfig {
 			cache = new PlayerCache(player.toString());
 
 			cacheMap.put(player, cache);
+			cacheMap.remove(player, cache);
 		}
 
 		return cache;
+	}
+
+	public Location getDloc(Location dloc) {
+		return this.deathlocation;
+
 	}
 
 }

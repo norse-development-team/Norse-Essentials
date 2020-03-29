@@ -24,7 +24,10 @@ public class DeathBackCommand extends SimpleCommand {
 
 		PlayerCache cache = PlayerCache.getCache(player);
 		cache.getDeathlocation();
+
 	}
+
+
 
 
 
