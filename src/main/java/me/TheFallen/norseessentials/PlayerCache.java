@@ -1,14 +1,10 @@
 package me.TheFallen.norseessentials;
 
-import com.Zrips.CMI.commands.list.back;
-import com.Zrips.CMI.commands.list.dback;
 import lombok.Getter;
-import lombok.Setter;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.jetbrains.annotations.NotNull;
 import org.mineacademy.fo.settings.YamlSectionConfig;
 
 import java.util.HashMap;
@@ -18,67 +14,43 @@ import java.util.UUID;
 
 @Getter
 public class PlayerCache extends YamlSectionConfig {
-
-
 	private static Map<UUID, PlayerCache> cacheMap = new HashMap<>();
 
-	//-----------Home Cache---------------//
-
-	public Location homeLocation;
+	private Location deathlocation;
 
 
-	public PlayerCache(final String uuid) {
+	public PlayerCache(String uuid) {
 		super(uuid);
 
 		loadConfiguration(null, "data.db");
 	}
 
-	public void setHomeLocation(Location homeLocation) {
-		this.homeLocation = homeLocation;
-
-		save("Home", homeLocation);
-	}
-
-	public Location getHomeLocation() {
-		return getLocation("Home");
-	}
-
 
 	@Override
 	protected void onLoadFinish() {
-		if (isSet("Home"))
-			getLocation("Home");
+		if (isSet("DBackLocation"))
+			deathlocation = getLocation("DBackLocation");
+		//work with this
 	}
 
 
 	//-----------Death Back---------------//
-	@Getter
-	public Location deathlocation;
-
-
-	private static Map<UUID, PlayerCache> dlocation = new HashMap<>();
 
 	public void setDeathlocation(Location dlocation) {
-		this.deathlocation = dlocation;
+		deathlocation = dlocation;
 
 		save("Death", dlocation);
 	}
 
-	public Location getDeathlocation() {
-		return getLocation("Death");
-	}
-
+	//move to a separate class
 	@EventHandler
 	public void onDeath(PlayerDeathEvent event){
 		Player player = event.getEntity();
 
 
-
 	}
 
-
-
-	public static PlayerCache getCache(final UUID player){
+	public static PlayerCache getCache(UUID player) {
 		PlayerCache cache = cacheMap.get(player);
 
 		if (cache == null){
