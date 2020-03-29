@@ -19,7 +19,7 @@ public class Survival extends SimpleCommand {
 		Player player = getPlayer();
 
 		hasPerm("ne.gamemode.survival");
-		hasPerm("ngmc.gamemode.all");
+		hasPerm("ne.gamemode.all");
 		player.setGameMode(GameMode.SURVIVAL);
 		tell("&eYou are now in Survival Mode!");
 	}

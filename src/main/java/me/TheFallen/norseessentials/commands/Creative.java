@@ -19,7 +19,7 @@ public class Creative extends SimpleCommand {
 		Player player = getPlayer();
 
 		hasPerm("ne.gamemode.creative");
-		hasPerm("ngmc.gamemode.all");
+		hasPerm("ne.gamemode.all");
 		player.setGameMode(GameMode.CREATIVE);
 		tell("&eYou are now in Creative Mode!");
 

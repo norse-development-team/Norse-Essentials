@@ -18,9 +18,7 @@ public class NorseMain extends SimplePlugin {
 
 		//Registering Commands
 		//----------Homes---------//
-		registerCommand( new SetHomeCommand());
-		registerCommand( new HomeCommand());
-		registerCommand( new DeleteCommand());
+
 
 		//----------GMC---------//
 		registerCommand(new Creative());

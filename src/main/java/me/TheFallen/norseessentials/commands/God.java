@@ -17,7 +17,7 @@ public class God extends SimpleCommand implements Listener {
 
 	public God() {
 		super("god");
-		setPermission("ngmc.god");
+		setPermission("ne.god");
 		setUsage("<Target Player>");
 	}
 
@@ -26,8 +26,8 @@ public class God extends SimpleCommand implements Listener {
 
 		checkConsole();
 		Player player = getPlayer();
-		hasPerm("ngmc.god");
-		hasPerm("ngmc.gamemode.all");
+		hasPerm("ne.god");
+		hasPerm("ne.gamemode.all");
 
 		if (!HasGod.contains(player.getName())){
 			player.setInvulnerable(true);

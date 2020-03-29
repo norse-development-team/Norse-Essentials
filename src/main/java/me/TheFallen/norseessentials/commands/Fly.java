@@ -10,7 +10,7 @@ public class Fly extends SimpleCommand {
 
 	public Fly() {
 		super("fly|f");
-		setPermission("ngmc.fly");
+		setPermission("ne.fly");
 		setUsage("<Target Player>");
 	}
 
@@ -22,8 +22,8 @@ public class Fly extends SimpleCommand {
 		Player player = getPlayer();
 
 
-		hasPerm("ngmc.fly");
-		hasPerm("ngmc.gamemode.all");
+		hasPerm("ne.fly");
+		hasPerm("ne.gamemode.all");
 		if (!HasFly.contains(player.getName())) {
 
 			player.setAllowFlight(true);

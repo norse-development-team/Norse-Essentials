@@ -8,7 +8,7 @@ public class Adventure extends SimpleCommand {
 
 	public Adventure() {
 		super("adventure|a|gm2");
-		setPermission("ne.gamemode.adventure");
+		setPermission("norseessentials.gamemode.adventure");
 		setUsage("<Target Player>");
 	}
 
@@ -18,8 +18,8 @@ public class Adventure extends SimpleCommand {
 		checkConsole();
 		Player player = getPlayer();
 
-		hasPerm("ne.gamemode.adventure");
-		hasPerm("ngmc.gamemode.all");
+		hasPerm("norseessentials.gamemode.adventure");
+		hasPerm("norseessentials.gamemode.all");
 		player.setGameMode(GameMode.ADVENTURE);
 		tell("&eYou are now in Adventure Mode!");
 

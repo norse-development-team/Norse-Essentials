@@ -20,7 +20,7 @@ public class Spectator extends SimpleCommand {
 		Player player = getPlayer();
 
 		hasPerm("ne.gamemode.spectator");
-		hasPerm("ngmc.gamemode.all");
+		hasPerm("ne.gamemode.all");
 		player.setGameMode(GameMode.SPECTATOR);
 		tell("&eYou are now in Spectator Mode!");
 
