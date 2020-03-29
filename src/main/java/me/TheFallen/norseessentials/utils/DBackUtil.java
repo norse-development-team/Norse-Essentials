@@ -16,8 +16,8 @@ public class DBackUtil {
 
 
 
-	public static DBackUtil dback;
-	private final Map<UUID, Location> dbackLoc = new HashMap<>();
+	//public static DBackUtil dback;
+	//private final Map<UUID, Location> dbackLoc = new HashMap<>();
 
 	/*private Object DBackUtil() {
 		public static DBackUtil getDBack(){

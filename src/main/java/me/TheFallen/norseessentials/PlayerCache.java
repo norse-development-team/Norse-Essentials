@@ -3,18 +3,15 @@ package me.TheFallen.norseessentials;
 import lombok.Getter;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.entity.PlayerDeathEvent;
 import org.mineacademy.fo.settings.YamlSectionConfig;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 
 @Getter
 public class PlayerCache extends YamlSectionConfig {
-	private static Map<UUID, PlayerCache> cacheMap = new HashMap<>();
+	private static Map<Player, PlayerCache> cacheMap = new HashMap<>();
 
 	private Location deathlocation;
 
@@ -36,14 +33,14 @@ public class PlayerCache extends YamlSectionConfig {
 
 	//-----------Death Back---------------//
 
-	public void setDeathloc(Location dloc) {
+	public void setDloc(Location dloc) {
 		deathlocation = dloc;
 
 		save("Death", dloc);
 	}
 
 
-	public static PlayerCache getCache(UUID player) {
+	public static PlayerCache getCache(Player player) {
 		PlayerCache cache = cacheMap.get(player);
 
 		if (cache == null){

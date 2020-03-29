@@ -1,6 +1,7 @@
 package me.TheFallen.norseessentials.events;
 
 import lombok.Getter;
+import me.TheFallen.norseessentials.PlayerCache;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,14 +21,14 @@ public class PlayerListener implements Listener {
 
 	}
 
-
+	Location location = getLocation();
 
 	@EventHandler
 	public void onDeath(PlayerDeathEvent event){
 		Player player = event.getEntity();
 
-
-
+		PlayerCache cache = PlayerCache.getCache(player);
+		cache.setDloc(location);
 
 	}
 
