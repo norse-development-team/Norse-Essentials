@@ -36,19 +36,12 @@ public class PlayerCache extends YamlSectionConfig {
 
 	//-----------Death Back---------------//
 
-	public void setDeathlocation(Location dlocation) {
-		deathlocation = dlocation;
+	public void setDeathloc(Location dloc) {
+		deathlocation = dloc;
 
-		save("Death", dlocation);
+		save("Death", dloc);
 	}
 
-	//move to a separate class
-	@EventHandler
-	public void onDeath(PlayerDeathEvent event){
-		Player player = event.getEntity();
-
-
-	}
 
 	public static PlayerCache getCache(UUID player) {
 		PlayerCache cache = cacheMap.get(player);

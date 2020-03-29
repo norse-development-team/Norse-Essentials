@@ -19,7 +19,7 @@ public class DBackUtil {
 	public static DBackUtil dback;
 	private final Map<UUID, Location> dbackLoc = new HashMap<>();
 
-	private Object DBackUtil() {
+	/*private Object DBackUtil() {
 		public static DBackUtil getDBack(){
 			if (dback == null) {
 				dback = new DBackUtil();
@@ -47,5 +47,5 @@ public class DBackUtil {
 	}
 	public void hasDBackLoc(){
 
-	}
+	}*/
 }
